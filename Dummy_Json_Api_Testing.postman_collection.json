@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "2de283a6-14c4-4d1c-b629-94d25d0772f4",
+		"name": "Dummy_Json_Api_Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49525980",
+		"_collection_link": "https://fahim-hasan-5783139.postman.co/workspace/fahim-hasan's-Workspace~c942b10f-b273-4818-8035-1663f3f03dfe/collection/49525980-2de283a6-14c4-4d1c-b629-94d25d0772f4?action=share&source=collection_link&creator=49525980"
+	},
+	"item": [
+		{
+			"name": "Get_product_list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base_Url}}/products",
+					"host": [
+						"{{Base_Url}}"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_a_single_Product",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 195,\r\n  \"title\": \"BMW Pencil\"\r\n  /* other product data */\r\n}\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base_Url}}/products/1",
+					"host": [
+						"{{Base_Url}}"
+					],
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add_a_new_product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 195,\r\n  \"title\": \"BMW Pencil\"\r\n  /* other product data */\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base_Url}}/products/add",
+					"host": [
+						"{{Base_Url}}"
+					],
+					"path": [
+						"products",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update_a_product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n\r\n    \"title\": \"Essence Lash Princess\",\r\n    \"price\": 10,\r\n    \"discountPercentage\": 10,\r\n    \"stock\": 5,\r\n    \"rating\": 4.94,\r\n    \"images\": [\r\n\"https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png\"\r\n    ],\r\n    \"thumbnail\": \"https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png\",\r\n    \"description\": \"The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.\",\r\n    \"brand\": \"Essence\",\r\n    \"category\": \"beauty\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base_Url}}/products/1",
+					"host": [
+						"{{Base_Url}}"
+					],
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update_single_data_of_a_Product",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"discountPercentage\": 20\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base_Url}}/products/1",
+					"host": [
+						"{{Base_Url}}"
+					],
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete_a_product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{Base_Url}}/products/1",
+					"host": [
+						"{{Base_Url}}"
+					],
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
